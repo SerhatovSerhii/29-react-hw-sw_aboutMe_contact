@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { base_url } from '../utils/constants'
 import style from '../css_modules/farGalaxy.module.css'
 const AboutMe = () => {
-  const [openingAbout, setOpenAbout] = useState({
+  const [openingAbout, setOpeningAbout] = useState({
     name: '',
     gender: '',
     height: '',
@@ -15,7 +15,7 @@ const AboutMe = () => {
     const hero = Math.floor(1 + Math.random() * 2)
     fetch(`${base_url}/v1/peoples/${hero}`)
       .then(res => res.json())
-      .then(data => setOpenAbout(data))
+      .then(data => setOpeningAbout(data))
   }, [])
 
 
